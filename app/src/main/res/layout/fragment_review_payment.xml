@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ReviewPaymentFragment">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Pay"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toTopOf="@+id/guideline14" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="Voucher Details"
+
+        android:textSize="14.2sp"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView6" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+
+
+        app:cardCornerRadius="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView7">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@drawable/card_gradient"
+                app:layout_constraintBottom_toBottomOf="@+id/materialTextView8"
+
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+
+                android:id="@+id/instituteIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:contentPadding="6dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+
+                app:layout_constraintTop_toTopOf="@+id/guideline17"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circular"
+                app:srcCompat="@drawable/ic_graduated_person" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/voucherCardHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Institution"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/instituteIcon" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView8"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="4dp"
+                android:paddingBottom="14dp"
+                android:text="Beacon House School System"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/voucherCardHeading" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/netPayableAmountHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Net Payable Amount"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/osloGrey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView8"/>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payableAmountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RS. 10,200"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/woodSmoke"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                app:layout_constraintTop_toBottomOf="@+id/netPayableAmountHeadingTextView"
+
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+              />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payableAmountBeforeDueDateHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/osloGrey"
+                android:textSize="12sp"
+
+                android:text="Payable Before\nDue Date"
+                app:layout_constraintTop_toBottomOf="@+id/payableAmountTextView"
+
+
+
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payableAmountBeforeDueDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RS. 10,200"
+                android:textColor="@color/woodSmoke"
+                android:textSize="16sp"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="@+id/payableAmountBeforeDueDateHeadingTextView"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintTop_toTopOf="@+id/payableAmountBeforeDueDateHeadingTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payableAmountAfterDueDateHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Payable After\nDue Date"
+                android:textColor="@color/osloGrey"
+
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/payableAmountBeforeDueDateHeadingTextView"
+
+                />
+
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payableAmountAfterDueDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="RS. 11,700"
+                android:textColor="@color/woodSmoke"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/payableAmountAfterDueDateHeadingTextView"
+                app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                app:layout_constraintTop_toTopOf="@+id/payableAmountAfterDueDateHeadingTextView" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView4"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="20dp"
+
+                android:background="@color/woodSmoke"
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/payableAmountAfterDueDateHeadingTextView"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circular"
+                app:srcCompat="@drawable/ic_icon_dialog_box_check" />
+
+            <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/voucherNumberHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Voucher number"
+                android:textColor="@color/shuttleGrey"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+
+
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView4"
+                app:layout_constraintTop_toBottomOf="@+id/payableAmountAfterDueDateHeadingTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/voucherNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="98820182"
+                android:textStyle="bold"
+                android:textColor="@color/woodSmoke"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+
+
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView4"
+                app:layout_constraintTop_toBottomOf="@+id/voucherNumberHeadingTextView" />
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/duedateImageView"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/shapeableImageView4"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circular"
+                app:srcCompat="@drawable/ic_due_date" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dueDateHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Due Date"
+                android:textColor="@color/shuttleGrey"
+                android:textSize="12sp"
+                android:layout_marginTop="14dp"
+
+
+                app:layout_constraintStart_toEndOf="@+id/duedateImageView"
+                app:layout_constraintTop_toBottomOf="@+id/voucherNumberTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dueDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="April 04,2021"
+                android:textStyle="bold"
+                android:textColor="@color/woodSmoke"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+
+
+                app:layout_constraintStart_toEndOf="@+id/duedateImageView"
+                app:layout_constraintTop_toBottomOf="@+id/dueDateHeadingTextView" />
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/validTillImageView"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="16dp"
+
+                app:layout_constraintStart_toStartOf="@+id/guideline16"
+                app:layout_constraintTop_toBottomOf="@+id/duedateImageView"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circular"
+                app:srcCompat="@drawable/ic_valid_till" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/validTillHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Valid Till"
+                android:textColor="@color/shuttleGrey"
+                android:textSize="12sp"
+                android:layout_marginTop="14dp"
+
+
+                app:layout_constraintStart_toEndOf="@+id/validTillImageView"
+                app:layout_constraintTop_toBottomOf="@+id/dueDateTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/validTillTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="May 05,2021"
+                android:textStyle="bold"
+                android:textColor="@color/woodSmoke"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp"
+                android:paddingBottom="20dp"
+
+
+                app:layout_constraintStart_toEndOf="@+id/validTillImageView"
+                app:layout_constraintTop_toBottomOf="@+id/validTillHeadingTextView" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:backgroundTint="@color/lochmara"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideline11"
+        app:layout_constraintStart_toStartOf="@+id/guideline10"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="15dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="15dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

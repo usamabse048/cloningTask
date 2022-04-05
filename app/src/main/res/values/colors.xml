@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="lochmara">#007dc5</color>
+    <color name="concerete">#f3f3f3</color>
+    <color name="gradientStart">#ff7eb0</color>
+    <color name="gradientEnd">#304dff</color>
+    <color name="osloGrey">#83868b</color>
+    <color name="woodSmoke">#0f1011</color>
+    <color name="shuttleGrey">#515357</color>
+    <color name="mischka">#e6e7e9</color>
 </resources>

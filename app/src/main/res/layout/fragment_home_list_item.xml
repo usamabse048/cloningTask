@@ -7,12 +7,10 @@
     android:id="@+id/recyclerItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="14dp"
-    app:cardElevation="8dp"
     app:cardCornerRadius="16dp"
     tools:context=".HomeListFragmentItem"
     android:layout_marginBottom="8dp"
-    android:padding="4dp">
+>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,10 +20,11 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/rightArrow"
-            android:layout_width="50dp"
+            android:layout_width="20dp"
 
-            android:layout_height="50dp"
+            android:layout_height="20dp"
 
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
             app:layout_constraintEnd_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toTopOf="@+id/guideline7"
             app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
@@ -35,8 +34,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tanyas School Fee"
-            app:layout_constraintEnd_toStartOf="@+id/rightArrow"
-            app:layout_constraintHorizontal_bias="0.08"
+            android:textSize="16sp"
+            android:textColor="@color/woodSmoke"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
             app:layout_constraintStart_toEndOf="@+id/personPhoto"
             app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
@@ -45,26 +46,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="090078601"
-            app:layout_constraintEnd_toStartOf="@+id/rightArrow"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:textColor="@color/woodSmoke"
             app:layout_constraintStart_toStartOf="@+id/nameTextView"
             app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/companyTextView"
             android:layout_width="wrap_content"
-            android:layout_height="16dp"
-            android:text="Punjab Group Of Colleges"
+            android:layout_height="wrap_content"
             android:ellipsize="start"
-            app:layout_constraintEnd_toStartOf="@+id/rightArrow"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:textColor="@color/osloGrey"
+            android:text="Punjab Group Of Colleges"
+
+
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+
             app:layout_constraintStart_toStartOf="@+id/accountNumberTextView"
             app:layout_constraintTop_toBottomOf="@+id/accountNumberTextView" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/personPhoto"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:background="@color/mischka"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circular"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
             app:layout_constraintStart_toStartOf="@+id/guideline5"
             app:layout_constraintTop_toTopOf="@+id/guideline7"
             app:srcCompat="@drawable/ic_baseline_person_24" />

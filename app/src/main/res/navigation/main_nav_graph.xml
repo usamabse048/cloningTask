@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/reviewPaymentFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.myapplication.fragments.homeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/reviewPaymentFragment"
+        android:name="com.example.myapplication.fragments.ReviewPaymentFragment"
+        android:label="fragment_review_payment"
+        tools:layout="@layout/fragment_review_payment" />
 </navigation>

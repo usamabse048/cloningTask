@@ -7,15 +7,66 @@
     tools:context=".fragments.homeFragment"
     android:background="#f3f3f3">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mainActivityGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mainActivityGuidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/materialTextView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/woodSmoke"
+        android:padding="14dp"
+        android:text="Fee And Voucher\nPayments"
+        android:textSize="28sp"
+
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline12" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/homeFragmentAddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="@color/white"
+        android:drawableRight="@drawable/ic_icon_add"
+        android:text="add"
+
+        android:textColor="@color/black"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialTextView9"
+        app:layout_constraintEnd_toStartOf="@+id/mainActivityGuidelineEnd"
+        app:layout_constraintTop_toTopOf="@+id/materialTextView9" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="18dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/mainActivityGuidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/materialTextView9" />
 
 
 
