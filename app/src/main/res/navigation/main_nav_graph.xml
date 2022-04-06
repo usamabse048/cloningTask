@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/reviewPaymentFragment">
+    app:startDestination="@id/payeeDetailCardFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -15,4 +15,10 @@
         android:name="com.example.myapplication.fragments.ReviewPaymentFragment"
         android:label="fragment_review_payment"
         tools:layout="@layout/fragment_review_payment" />
+    <fragment
+        android:id="@+id/payeeDetailCardFragment"
+        android:name="com.example.myapplication.fragments.PayeeDetailCardFragment"
+        android:label="PayeeDetailCardFragment"
+        tools:layout="@layout/fragment_payee_detail_card"
+        />
 </navigation>

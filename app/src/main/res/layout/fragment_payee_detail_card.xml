@@ -4,13 +4,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".fragments.PayeeDetailCardFragment"
 
     >
-
-
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -39,45 +38,45 @@
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/payee_details_card_gradient"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
-        app:layout_constraintTop_toTopOf="@+id/materialCardView"
-        />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="16dp"
+
+        app:cardCornerRadius="36.9dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView9">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/payee_details_card_gradient"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/innerLeftGuideLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="20dp"
-                />
+                app:layout_constraintGuide_begin="20dp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/innerRightGuideLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_end="20dp"
-                />
+                app:layout_constraintGuide_end="20dp" />
 
 
             <androidx.constraintlayout.widget.Guideline
@@ -85,36 +84,156 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_begin="20dp"
-                />
+                app:layout_constraintGuide_begin="20dp" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/innerLowerGuideLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_end="20dp"
-                />
+                app:layout_constraintGuide_end="20dp" />
 
 
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/payeeDetailsCardImageView"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
-                app:contentPadding="12dp"
+                android:background="@color/lochmara"
 
-                app:layout_constraintTop_toTopOf="@id/innerUpperGuideLine"
+                app:contentPadding="12dp"
                 app:layout_constraintLeft_toRightOf="@id/innerLeftGuideLine"
 
-                android:background="@color/lochmara"
+                app:layout_constraintTop_toTopOf="@id/innerUpperGuideLine"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circular"
                 app:srcCompat="@drawable/ic_white_person"
 
 
                 />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editMaterialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:backgroundTint="@color/white"
+                android:drawableRight="@drawable/ic_icon_edit"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="Edit"
+                android:textAllCaps="false"
+                android:textColor="@color/woodSmoke"
+                android:textSize="14sp"
+
+                app:cornerRadius="17dp"
+                app:layout_constraintRight_toLeftOf="@id/deleteMaterialButton"
+                app:layout_constraintTop_toBottomOf="@id/innerUpperGuideLine"
+
+
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteMaterialButton"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:backgroundTint="@color/white"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp"
+                android:text="x"
+                app:icon="@drawable/ic_icon_button_delete"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconSize="12dp"
+                app:layout_constraintRight_toLeftOf="@id/innerRightGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/innerUpperGuideLine"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.circular"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/payeeDetailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Nida Ali"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/innerLeftGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/payeeDetailsCardImageView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cnicHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Student Id"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toRightOf="@id/innerLeftGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/payeeDetailName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cnicTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="340112222114452"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/innerLeftGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/cnicHeadingTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/companyHeadingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Company"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintLeft_toRightOf="@id/innerLeftGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/cnicTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/comapanyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Punjab Group Of Colleges"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/innerLowerGuideLine"
+                app:layout_constraintLeft_toRightOf="@id/innerLeftGuideLine"
+                app:layout_constraintTop_toBottomOf="@id/companyHeadingTextView" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/lochmara"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline6"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
